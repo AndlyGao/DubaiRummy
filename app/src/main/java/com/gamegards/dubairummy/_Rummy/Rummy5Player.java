@@ -209,7 +209,7 @@ public class Rummy5Player extends BaseActivity implements Animation.AnimationLis
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rummypoint);
 
         if(getIntent().hasExtra("player2"))
             isPlayer2 = true;
@@ -2479,7 +2479,7 @@ public class Rummy5Player extends BaseActivity implements Animation.AnimationLis
 
 
         getTextView(R.id.tv_gameid).setText("#"+game_id);
-        getTextView(R.id.tvTableType).setText("Rummy Point");
+        getTextView(R.id.tvTableType).setText("Rummy Point "+Functions.getStringFromTextView(txtPlay1wallet));
 
         if(Functions.checkisStringValid(total_table_amount))
         {

@@ -1202,13 +1202,14 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
 
     private void checkMyCards() {
 
-        Functions.LOGE(TAG,"checkMyCard= CALLED");
-
         int my_count = 0;
         for (int i = 0; i < rlt_addcardview.getChildCount() ; i++) {
 
             View view = rlt_addcardview.getChildAt(i);
             LinearLayout lnr_group_card = view.findViewById(R.id.lnr_group_card);
+
+            if(lnr_group_card == null)
+                return;
 
             for (int j = 0; j < lnr_group_card.getChildCount() ; j++) {
                 my_count++;
@@ -1226,7 +1227,6 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
             params.put("user_id",""+prefs.getString("user_id", ""));
             params.put("token",""+prefs.getString("token", ""));
 
-            int finalMy_count = my_count;
             ApiRequest.Call_Api(this, Const.Rummypoolmy_card, params, new Callback() {
                 @Override
                 public void Responce(String resp, String type, Bundle bundle) {
@@ -1241,13 +1241,8 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
                         {
                             JSONArray cardsArray = jsonObject.optJSONArray("cards");
 
-                            if(cardsArray != null
-                                    && cardsArray.length() > 0
-                                    && rlt_addcardview.getChildCount() > 0
-                                    && finalMy_count < 13
-                            )
+                            if(cardsArray != null && cardsArray.length() > 0)
                             {
-
 
                                 for (int k = 0; k < rlt_addcardview.getChildCount() ; k++) {
 
@@ -1274,6 +1269,7 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
                                             {
                                                 isCardAvaialble =true;
                                                 break;
+//
                                             }
 
                                         }
@@ -1283,6 +1279,15 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
 //
 //                                                    lnr_group_card.removeViewAt(j);
                                             RemoveCardFromArrayLists(mycardid);
+                                            new Handler().postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    animation_type = "reset_card";
+                                                    API_CALL_Sort_card_value(null,0,0);
+
+
+                                                }
+                                            },500);
 
                                         }
 
@@ -1291,25 +1296,9 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
                                 }
 
 
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        animation_type = "reset_card";
-                                        API_CALL_Sort_card_value(null,0,0);
-
-
-                                    }
-                                },500);
-
-                                if(finalMy_count < RUMMY_TOTALE_CARD)
-                                {
-                                    RestartGameActivity();
-                                    Parse_response(jsonObject);
-                                }
 
                             }
                             else {
-                                RestartGameActivity();
                                 Parse_response(jsonObject);
                             }
 
@@ -2803,7 +2792,7 @@ public class RummyPullGame extends BaseActivity implements Animation.AnimationLi
 
 
         getTextView(R.id.tv_gameid).setText("#"+game_id+"-"+round);
-        getTextView(R.id.tvTableType).setText("Pull Rummy ");
+        getTextView(R.id.tvTableType).setText("Pull Rummy "+Functions.getStringFromTextView(txtPlay1wallet));
 
         if(Functions.checkisStringValid(total_table_amount))
         {

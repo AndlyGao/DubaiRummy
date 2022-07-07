@@ -78,7 +78,7 @@
             android:id="@+id/tvTableType"
             android:layout_width="wrap_content"
             style="@style/RummDetailsText"
-            android:text="800"
+            android:text=""
             />
         <View
             android:layout_width="2dp"
@@ -91,7 +91,7 @@
             android:id="@+id/tvTableamount"
             android:layout_width="wrap_content"
             style="@style/RummDetailsText"
-            android:text="800"
+            android:text=""
             />
 
     </LinearLayout>

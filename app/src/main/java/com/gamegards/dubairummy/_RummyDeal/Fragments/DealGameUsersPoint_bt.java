@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -205,7 +206,7 @@ public class DealGameUsersPoint_bt extends BottomSheetDialogFragment {
                 View view = Functions.CreateDynamicViews(R.layout.item_point,lnr_pointslist,getActivity());
                 TextView tvPoints = view.findViewById(R.id.tvPoints);
 
-                tvPoints.setText(""+model.user_points);
+                tvPoints.setText(Html.fromHtml(model.user_points));
 
             }
         }

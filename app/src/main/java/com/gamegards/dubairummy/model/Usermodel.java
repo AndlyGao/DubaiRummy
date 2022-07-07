@@ -16,5 +16,5 @@ public class Usermodel {
     public  int VIEW_TYPE = 0;
 
     public ArrayList<Usermodel> pointlist;
-
+    public int points = 0;
 }

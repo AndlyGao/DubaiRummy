@@ -1204,13 +1204,14 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
 
     private void checkMyCards() {
 
-        Functions.LOGE(TAG,"checkMyCard= CALLED");
-
         int my_count = 0;
         for (int i = 0; i < rlt_addcardview.getChildCount() ; i++) {
 
             View view = rlt_addcardview.getChildAt(i);
             LinearLayout lnr_group_card = view.findViewById(R.id.lnr_group_card);
+
+            if(lnr_group_card == null)
+                return;
 
             for (int j = 0; j < lnr_group_card.getChildCount() ; j++) {
                 my_count++;
@@ -1228,7 +1229,6 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
             params.put("user_id",""+prefs.getString("user_id", ""));
             params.put("token",""+prefs.getString("token", ""));
 
-            int finalMy_count = my_count;
             ApiRequest.Call_Api(this, Const.RummyDealmy_card, params, new Callback() {
                 @Override
                 public void Responce(String resp, String type, Bundle bundle) {
@@ -1243,13 +1243,8 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
                         {
                             JSONArray cardsArray = jsonObject.optJSONArray("cards");
 
-                            if(cardsArray != null
-                                    && cardsArray.length() > 0
-                                    && rlt_addcardview.getChildCount() > 0
-                                    && finalMy_count < 13
-                            )
+                            if(cardsArray != null && cardsArray.length() > 0)
                             {
-
 
                                 for (int k = 0; k < rlt_addcardview.getChildCount() ; k++) {
 
@@ -1276,6 +1271,7 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
                                             {
                                                 isCardAvaialble =true;
                                                 break;
+//
                                             }
 
                                         }
@@ -1285,6 +1281,15 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
 //
 //                                                    lnr_group_card.removeViewAt(j);
                                             RemoveCardFromArrayLists(mycardid);
+                                            new Handler().postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    animation_type = "reset_card";
+                                                    API_CALL_Sort_card_value(null,0,0);
+
+
+                                                }
+                                            },500);
 
                                         }
 
@@ -1293,26 +1298,9 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
                                 }
 
 
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        animation_type = "reset_card";
-                                        API_CALL_Sort_card_value(null,0,0);
-                                        API_CALL_Sort_card_value(null,0,0);
-
-
-                                    }
-                                },500);
-
-                                if(finalMy_count < RUMMY_TOTALE_CARD)
-                                {
-                                    RestartGameActivity();
-                                    Parse_response(jsonObject);
-                                }
 
                             }
                             else {
-                                RestartGameActivity();
                                 Parse_response(jsonObject);
                             }
 
@@ -2687,6 +2675,9 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
 
             boolean isCardAvaialble = false;
 
+            if(cardsArray == null)
+                return;
+
             for (int k = 0; k < cardsArray.length() ; k++) {
 
                 JSONObject cardObject = cardsArray.getJSONObject(k);
@@ -2805,7 +2796,7 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
         int round  = jsonObject.optInt("round",1);
 
         getTextView(R.id.tv_gameid).setText("#"+game_id+"-"+round);
-        getTextView(R.id.tvTableType).setText("Deal Rummy ");
+        getTextView(R.id.tvTableType).setText("Deal Rummy "+Functions.getStringFromTextView(txtPlay1wallet));
 
         if(Functions.checkisStringValid(total_table_amount))
         {
@@ -3411,6 +3402,15 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
                     {
 //                                pointModel.user_points = pointObject.getString("points");
                         pointModel.user_points = pointObject.getString("total_points");
+                        pointModel.points = pointObject.getInt("points");
+                        if(pointModel.points < 0)
+                        {
+                            pointModel.user_points += "<strong><font color='#FF0000'> ("+pointModel.points+")</font></strong>";
+                        }
+                        else
+                        {
+                            pointModel.user_points += "<strong><font color='#00FF00'> (+"+pointModel.points+")</font></strong>";
+                        }
                         usermodel.pointlist.add(pointModel);
                     }
 
@@ -3436,19 +3436,19 @@ public class RummyDealGame extends BaseActivity implements Animation.AnimationLi
 
                     String user_point = model.pointlist.get(model.pointlist.size()-1).user_points;
 
-                    if(Functions.checkisStringValid(user_point));
-                    point = Integer.parseInt(user_point);
+//                    if(Functions.checkisStringValid(user_point));
+//                    point = Integer.parseInt(user_point);
 
-                    if(point > 101)
-                    {
-                        if(!isPayDialogShow)
-                        {
-                            userLoose();
-//                            API_CALL_rejoin_game_amount();
-                        }
-                    }
-
-                    break;
+//                    if(point > 101)
+//                    {
+//                        if(!isPayDialogShow)
+//                        {
+//                            userLoose();
+////                            API_CALL_rejoin_game_amount();
+//                        }
+//                    }
+//
+//                    break;
                 }
             }
         }

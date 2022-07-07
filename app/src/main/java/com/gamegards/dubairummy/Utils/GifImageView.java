@@ -34,6 +34,7 @@ public class GifImageView extends androidx.appcompat.widget.AppCompatImageView {
             srcId = attrs.getAttributeResourceValue(android_schemas, "background", -1);
         }
 
+        setBackground(null);
         Glide.with(getContext())
                 .load(srcId)
                 .into(this);
