@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bghome"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/d_pop_setting"
+            android:orientation="vertical"
+            android:id="@+id/lnr_box"
+            android:layout_marginTop="-40dp"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_marginHorizontal="25dp"
+            android:padding="20dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnrTermsand_condition"
+                android:layout_above="@+id/cb_termscondition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_termscondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bt_accept"
+                android:layout_marginBottom="10dp"
+                android:text="@string/i_have_read_and_agree_with_the_above" />
+
+            <Button
+                android:id="@+id/bt_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_green_bg"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:text="@string/click_here_to_accept" />
+
+            <TextView
+                android:id="@+id/txtnotfound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Data no available!"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlt_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:indeterminateDrawable="@drawable/cpb_3"
+                    android:indeterminateDuration="4000"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rtl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            >
+            <ImageView
+                android:id="@+id/imgclosetop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/close"
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/img_diaProfile"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:src="@drawable/app_icon"
+                android:background="@drawable/strip_bg"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/txtheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="GIFTS"
+                    android:textColor="@color/Golder_yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

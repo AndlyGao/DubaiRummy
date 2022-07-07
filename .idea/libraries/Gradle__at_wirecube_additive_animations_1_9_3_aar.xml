@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: at.wirecube:additive_animations:1.9.3@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files (x86)/Java/jre1.8.0_161/bin/caches/transforms-2/files-2.1/f10ab5150f13185efeeb184bb05790f3/jetified-additive_animations-1.9.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../Program Files (x86)/Java/jre1.8.0_161/bin/caches/transforms-2/files-2.1/f10ab5150f13185efeeb184bb05790f3/jetified-additive_animations-1.9.3/res" />
+      <root url="file://$PROJECT_DIR$/../../../../../Program Files (x86)/Java/jre1.8.0_161/bin/caches/transforms-2/files-2.1/f10ab5150f13185efeeb184bb05790f3/jetified-additive_animations-1.9.3/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files (x86)/Java/jre1.8.0_161/bin/caches/modules-2/files-2.1/at.wirecube/additive_animations/1.9.3/4255d1ad04c735d8abf1150e8258e40a949913f6/additive_animations-1.9.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files (x86)/Java/jre1.8.0_161/bin/caches/modules-2/files-2.1/at.wirecube/additive_animations/1.9.3/aead9f29c23b0e5371dd12a09c0827e37fd21350/additive_animations-1.9.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

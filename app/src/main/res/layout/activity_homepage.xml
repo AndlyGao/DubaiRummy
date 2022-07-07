@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bghome"
+    tools:context=".Activity.Homepage"
+    android:layout_centerVertical="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btnbuychips"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="BUY CHIPS"
+            android:textColor="#ADACAD"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/noti"
+            android:tint="@color/colordullwhite"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgshare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/imalucky"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/btnbuychips"
+            android:src="@drawable/lucky"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/rltheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rltUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="70dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/rltimageptofile"
+                    android:layout_alignTop="@+id/rltimageptofile"
+                    android:layout_alignRight="@+id/rltimageptofile"
+                    android:layout_alignBottom="@+id/rltimageptofile"
+                    android:background="@drawable/home_header" />
+
+                <RelativeLayout
+                    android:id="@+id/rltimageptofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="55dp"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imaprofile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:id="@+id/txtproname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/imaprofile"
+                        android:gravity="top"
+                        android:text="User"
+                        android:textAllCaps="true"
+                        android:textColor="#E29700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnr_levels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_toRightOf="@+id/rltimageptofile"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/lnr_levels"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="-25dp"
+                                android:layout_marginRight="-20dp"
+                                android:layout_toLeftOf="@+id/iv_add"
+                                android:layout_toRightOf="@+id/imgicon"
+                                android:background="@drawable/ic_corner_strip" />
+
+                            <ImageView
+                                android:id="@+id/imgicon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_currency_chip" />
+
+                            <TextView
+                                android:id="@+id/txtwallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/imgicon"
+                                android:gravity="center"
+                                android:minWidth="100dp"
+                                android:text="2.37L"
+                                android:textColor="@color/colordullwhite"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_add"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toRightOf="@+id/txtwallet"
+                                android:src="@drawable/ic_refresh" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@id/lnrbutton"
+                        android:layout_alignTop="@id/lnrbutton"
+                        android:layout_alignRight="@id/lnrbutton"
+                        android:layout_alignBottom="@id/lnrbutton"
+                        android:scaleType="fitXY"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/lnrbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/lnrvideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/imgvideo"
+                                android:layout_width="@dimen/home_icon_size"
+                                android:layout_height="@dimen/home_icon_size"
+                                android:layout_gravity="top|center_horizontal"
+                                android:src="@drawable/home_video" />
+
+                            <com.gamegards.dubairummy.Utils.TextViewWithFont
+                                android:id="@+id/txtvideo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Mail"
+                                android:textColor="@color/colordullwhite"
+                                android:textSize="15dp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnrsetting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgsetting"
+                                android:layout_width="@dimen/home_icon_size"
+                                android:layout_height="@dimen/home_icon_size"
+                                android:layout_gravity="top|center_horizontal"
+                                android:src="@drawable/home_setting" />
+
+                            <com.gamegards.dubairummy.Utils.TextViewWithFont
+                                android:id="@+id/txtLogout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Logout"
+                                android:textColor="@color/colordullwhite"
+                                android:textSize="15dp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnrlogout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgLogout"
+                                android:layout_width="@dimen/home_icon_size"
+                                android:layout_height="@dimen/home_icon_size"
+                                android:tint="@color/white"
+                                android:layout_gravity="top|center_horizontal"
+                                android:src="@drawable/ic_logout" />
+
+                            <com.gamegards.dubairummy.Utils.TextViewWithFont
+                                android:id="@+id/txtlogout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Logout"
+                                android:textColor="@color/colordullwhite"
+                                android:textSize="15dp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_lockcoins"
+            android:layout_above="@+id/rltBottom"
+            android:layout_marginBottom="-50dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rltlady"
+            android:layout_above="@+id/rltBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltheader"
+            android:layout_marginBottom="-20dp"
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/home_lady"
+                android:layout_centerVertical="true"
+                />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/ivIcon"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                />-->
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rltBottom"
+            android:layout_below="@+id/rltheader"
+            android:layout_toRightOf="@+id/rltlady"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rltTeenpatti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:onClick="openPublicTeenpatti"
+                        android:visibility="gone">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:id="@+id/imgpublicGame"
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_public_img" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltRummypoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:onClick="openRummyGame">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_rummy" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltRummyPull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:onClick="openRummyPullGame">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_pool_rummy" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltRummy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:onClick="openRummyDealGame">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_deal_rummy" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rltAndharbhar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:onClick="openAndharbahar"
+                        android:visibility="gone"
+                        >
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:id="@+id/iv_andher"
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_andherbahar" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rltDragonTiger"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/home_card_left_mar"
+                        android:layout_weight="1"
+                        android:onClick="openDragonTiger">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:id="@+id/ivDragonandTiger"
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_dragontiger" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltJackpot"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_icon_right_margin"
+                        android:layout_weight="1"
+                        android:onClick="openLuckJackpotActivity">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_jackpot_teenpatti" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltSeveUp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_icon_right_margin"
+                        android:layout_weight="1"
+                        android:onClick="openSevenup"
+                        android:visibility="gone">
+
+                        <com.gamegards.dubairummy.Utils.GifImageView
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_jackpot_teenpatti" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltPrivate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgPrivategame"
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_private_table" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ImgCustomePage"
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/home_custom_table" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/home_card_width"
+                            android:layout_height="@dimen/home_card_height"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                            <com.gamegards.dubairummy.CustomView.ShiningView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-70dp"
+                                android:rotation="40" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
+        <LinearLayout
+            android:id="@+id/lnrinvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_alignParentBottom="true"
+            >
+
+            <com.gamegards.dubairummy.Utils.GifImageView
+                android:id="@+id/imginvite"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top|center_horizontal"
+                android:src="@drawable/home_invite" />
+
+            <com.gamegards.dubairummy.Utils.TextViewWithFont
+                android:id="@+id/txtInvite"
+                style="@style/HomeIconTextView"
+                android:text="Invite"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/rltBottom"
+            android:layout_alignRight="@id/rltBottom"
+            android:layout_alignBottom="@id/rltBottom"
+            android:layout_alignTop="@id/rltBottom"
+            android:background="@drawable/ic_bottom_strip"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rltBottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/lnrinvite"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnrbottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_35dp">
+
+                <LinearLayout
+                    android:id="@+id/lnr_social"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_s_media" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Joint us"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="160dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right">
+
+                    <LinearLayout
+                        android:id="@+id/lnrhistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/home_icon_right_margin"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/home_icon_size"
+                            android:layout_height="@dimen/home_icon_size"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/home_leaderboard" />
+
+                        <com.gamegards.dubairummy.Utils.TextViewWithFont
+                            style="@style/HomeIconTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Board"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_redeem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_redeem"
+                            android:layout_width="@dimen/home_icon_size"
+                            android:layout_height="@dimen/home_icon_size"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginBottom="2dp"
+                            android:src="@drawable/ic_withdraw" />
+
+                        <com.gamegards.dubairummy.Utils.TextViewWithFont
+                            android:id="@+id/tv_redeem"
+                            style="@style/HomeIconTextView"
+                            android:text="Withdraw"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnrmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/home_icon_right_margin"
+                        android:layout_toRightOf="@+id/lnr_levels"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgMail"
+                            android:layout_width="@dimen/home_icon_size"
+                            android:layout_height="@dimen/home_icon_size"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/ic_bonus" />
+
+                        <com.gamegards.dubairummy.Utils.TextViewWithFont
+                            android:id="@+id/txtMail"
+                            style="@style/HomeIconTextView"
+                            android:layout_marginTop="-10dp"
+                            android:text="Bonus"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnrbuychips2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/home_icon_right_margin"
+                        android:layout_toRightOf="@+id/lnrmail"
+                        android:onClick="openBuyChipsActivity"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/home_icon_size"
+                            android:layout_height="@dimen/home_icon_size"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/buy_chips" />
+
+                        <com.gamegards.dubairummy.Utils.TextViewWithFont
+                            style="@style/HomeIconTextView"
+                            android:layout_marginTop="-5dp"
+                            android:text="add cash"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrearnchips"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtEarn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="15dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/lnrbuychips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:gravity="right|bottom"
+                android:onClick="openBuyChipsActivity"
+                >
+
+                <ImageView
+                    android:id="@+id/imgbuychips"
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/ic_add_cash" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlt_animation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+        </RelativeLayout>
+
+        <com.gamegards.dubairummy.Utils.TextViewWithFont
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Welcome Back "
+            android:textColor="@color/colordullwhite"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!--        <View-->
+        <!--            android:id="@+id/view_center"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            />-->
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rltRestrictedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

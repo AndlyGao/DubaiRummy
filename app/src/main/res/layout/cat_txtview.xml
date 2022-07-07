@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rltmainview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle"
+        android:layout_marginLeft="8dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/txt_cat"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:ellipsize="end"
+        android:shadowRadius="3"
+        android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+</RelativeLayout>

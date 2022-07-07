@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bghome"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/d_pop_setting"
+                android:orientation="vertical"
+                android:id="@+id/lnr_box"
+                android:layout_marginTop="@dimen/pop_up_top_margin"
+                android:layout_below="@+id/rtl_toolbar"
+                android:layout_marginHorizontal="25dp"
+                android:padding="20dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/table_background_color"
+                        android:elevation="2dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeadBoot"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Boot"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeadMax"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvMaxBlind"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Max Blind"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeadChaal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvChaalLimit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Chaal Limit"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeadPot"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvPotLimite"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Pot Limit"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeadPlayer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Total Players"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeadJoin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Join"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_user_points"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtnotfound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data no available!"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rlt_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        style="?android:attr/progressBarStyle"
+                        android:indeterminateDrawable="@drawable/cpb_3"
+                        android:indeterminateDuration="4000"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rtl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                >
+                <ImageView
+                    android:id="@+id/imgclosetop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/close"
+                    android:visibility="visible"
+                    android:layout_alignParentRight="true"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/img_diaProfile"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/app_icon"
+                    android:background="@drawable/strip_bg"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Teen Patti"
+                        android:textColor="@color/Golder_yellow"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

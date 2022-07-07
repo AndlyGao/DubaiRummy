@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/d_buy_box"
+        android:layout_alignLeft="@id/rltParentLayout"
+        android:layout_alignRight="@id/rltParentLayout"
+        android:layout_alignTop="@id/rltParentLayout"
+        android:layout_alignBottom="@id/rltParentLayout"
+        />
+    <RelativeLayout
+        android:id="@+id/rltParentLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rel_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            >
+
+            <ImageView
+                android:id="@+id/imalucky"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/bulkchipsgreen"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/lnrheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imalucky"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtproname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" 10Cr "
+                    android:lineSpacingExtra="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colordullwhite"
+                    android:textStyle="bold|italic"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvMaxCoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" 10Cr "
+                    android:lineSpacingExtra="5dp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/colordullwhite"
+                    android:textStyle="bold|italic"
+                    android:textSize="20dp"
+                    android:visibility="gone"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnrheader"
+                android:layout_centerHorizontal="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="499.00"
+                        android:textColor="#FFCC00"
+                        android:textSize="20dp"
+                        android:textStyle="bold|italic"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/imgbuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/btn_green_bg"
+                        android:text="Redeem"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>

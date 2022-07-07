@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "667087809564",
+    "project_id": "bull-games-f2946",
+    "storage_bucket": "bull-games-f2946.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667087809564:android:0829492a5f016cf85643d9",
+        "android_client_info": {
+          "package_name": "com.gamegards.dubairummy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667087809564-qua2kaa417mf0rm965oiq8hjp0or2h6n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamegards.dubairummy",
+            "certificate_hash": "5849c8fac447dd15b8204911bc141ded33d9fa26"
+          }
+        },
+        {
+          "client_id": "667087809564-sfpe58bq5ldv4nkfr2fvbhdubkv8tl06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4rPrTac9QN6sjr9M-2Zpg-h9PginFcek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667087809564-sfpe58bq5ldv4nkfr2fvbhdubkv8tl06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="170dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/d_buy_box"
+    android:padding="2dp"
+    android:layout_margin="10dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/strip_setting_bg"
+        app:cardCornerRadius="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel_layout"
+                android:layout_above="@+id/txtAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pop_setting_stroke"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/imalucky"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bulkchipsred" />
+
+                <LinearLayout
+                    android:id="@+id/lnrheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imalucky"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtproname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=" 10Cr "
+                        android:lineSpacingExtra="5dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/lnrheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+
+
+                    <ImageView
+                        android:id="@+id/imgbuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/buychips"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:text="499.00"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>
